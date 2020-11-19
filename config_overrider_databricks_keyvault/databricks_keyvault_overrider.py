@@ -1,7 +1,7 @@
 import logging
 
+from configuration_overrider.abstract_overrider import AbstractOverrider
 from pyspark.sql import SparkSession
-from config_resolver.overriders.abstract_overrider import AbstractOverrider
 
 log = logging.getLogger(__name__)
 
