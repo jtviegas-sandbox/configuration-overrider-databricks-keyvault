@@ -1,2 +1,2 @@
-"""package: configuration_overrider_databricks_keyvault"""
+"""package: configuration-overrider-databricks-keyvault"""
 __version__ = '0.0.5'
