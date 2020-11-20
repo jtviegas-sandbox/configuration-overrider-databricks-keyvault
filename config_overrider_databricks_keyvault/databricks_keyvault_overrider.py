@@ -1,11 +1,12 @@
 import logging
 
-from configuration_overrider.abstract_overrider import AbstractOverrider
+from configuration_overrider.abstract_overrider import AbstractOverrider, overrider_impl
 from pyspark.sql import SparkSession
 
 log = logging.getLogger(__name__)
 
 
+@overrider_impl
 class SparkKeyVaultOverrider(AbstractOverrider):
 
     def __init__(self, config: dict):
