@@ -3,7 +3,7 @@ requires = ["flit_core >=2,<4"]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
-module = "config_overrider_databricks_keyvault"
+module = "configuration_resolver"
 dist-name = "configuration-overrider-databricks-keyvault"
 author = "jtviegas"
 author-email = "jtviegas.js@gmail.com"
@@ -13,5 +13,5 @@ classifiers = [
 ]
 requires-python = ">=3.7"
 requires = [
-    "configuration-overrider==0.0.3",
+    "configuration-overrider",
 ]
