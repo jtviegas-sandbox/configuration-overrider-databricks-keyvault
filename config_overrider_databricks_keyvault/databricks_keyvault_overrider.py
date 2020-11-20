@@ -1,19 +1,18 @@
 import logging
 
-from configuration_overrider.abstract_overrider import AbstractOverrider, overrider_impl
+from configuration_overrider.abstract_overrider import AbstractOverrider
 from pyspark.sql import SparkSession
 
 log = logging.getLogger(__name__)
 
 
-@overrider_impl
-class SparkKeyVaultOverrider(AbstractOverrider):
+class DatabricksKeyVaultOverrider(AbstractOverrider):
 
     def __init__(self, config: dict):
         log.debug(f"[__init__|in] ({[k + ':' + v[0:3] for k, v in config.items()]}")
 
         AbstractOverrider.validate_configuration(['keyvault_scope'], config)
-        self.__dbutils = SparkKeyVaultOverrider.get_dbutils()
+        self.__dbutils = DatabricksKeyVaultOverrider.get_dbutils()
         self.__scope = config["keyvault_scope"]
 
         log.debug(f"[__init__|out]")
